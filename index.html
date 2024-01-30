@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="left"><img src="logo.png" alt=""></div>
+            <div class="right">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="#Contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+               Hi, My name is <span class="red">Harsh</span> 
+                <div>and i am a passionate</div>
+                <div><span class="red">Web Developer</span>.</div>
+                <div class="buttons">
+                    <button class="btn"><a href="Resume.pdf">Download Resume</a></button>
+                    <button class="btn"><a href="https://github.com/Harsh6888">Github</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="img.png" alt="">
+            </div>
+        </section>
+        <section class="secondSection" id="About">
+            <div class="leftSection">
+                <img src="image.png" alt="">
+            </div>
+            <div class="rightSection">
+            
+                <h2 class="sub-title">About Me</h2>
+                <p>I'm <b>Harsh Sharma</b>, a dedicated web developer with a passion for crafting digital experiences that leave a lasting impression.
+                    I specialize in both front-end and back-end technologies, bringing ideas to life through clean, efficient code.
+                </p>
+                <div class="tab-title">
+                    <h2 class="tab-links active-link">Skills</h2>
+                </div>
+                <div class="tab-content">
+                    <ul>
+                        <li><span>HTML</span><br></li>
+                        <li><span>CSS</span><br></li>
+                        <li><span>JavaScript</span><br></li>
+                        <li><span>Python</span><br></li>
+                        <li><span>C++</span><br></li>
+                    </ul>
+                </div>
+             </div>
+        </section> 
+            <section class="thirdSection">
+                <div id="Contact">
+                    <div class="container">
+                        <div class="row">
+                             <div class="contact-left">
+                                  <h1 class="sub-title">Contact Me</h1>
+                                  <P><i class="fa-solid fa-paper-plane"></i>harshh6888@gmail.com</P>
+                                  <p><i class="fa-solid fa-square-phone"></i>7275868715</p>
+                                  <button class="btn btn2"><a href="Resume.pdf" download >Download Resume</a></button>
+                             </div>
+                             <div class="contact-right">
+                                <form name="submit-to-google-sheet">
+                                    <input type="text" name="Name" placeholder="Enter Your Name" required>
+                                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                    <button type="submit" class="btn btn2">Submit</button>
+                                </form>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h2>Harsh's Developer</h2>
+            </div>
+            <div>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/Harsh.sharma7275?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a></li>
+                   <li><a href="https://x.com/hs72758?t=223TjQeUxXkWLM2TWSFAzw&s=09"><i class="fab fa-twitter"></i></a></li>
+                   <li><a href="https://www.instagram.com/harshhhh._s?igsh=N3V6NWJmMGo1Ynp3"><i class="fab fa-instagram"></i></a></li>
+                   <li><a href="https://www.linkedin.com/in/harsh-sharma-7a336b2a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a></li>
+                   <li><a href="https://github.com/Harsh6888"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+              </div> 
+        </div>
+<hr>        
+        <div class="footer-rights">
+            Copyright &#169; 2024 harshportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwusBnF9f5uv69bMpDgeavvZuYbL7DIzf1utXPCk_Wm_CqbwjPBiYQPI20ysb2ZoyfoGA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
